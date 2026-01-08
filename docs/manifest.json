@@ -1,0 +1,672 @@
+{
+  "source_base_path": "C:/Users/c3658446/source/repos/ase-boose-assignment-RiazAhmed0113",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppArray.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppArray",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppArray.yml\" sourcestartlinenumber=\"1\">Handles array declarations of the form:\narray int name = &lt;sizeExpr&gt;\narray real name = &lt;sizeExpr&gt;\nAlso accepts the shorthand without '=':\narray int name &lt;sizeExpr&gt;\nCreates and registers the array in the preprocessor state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppBoolean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppBoolean.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppBoolean",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppBoolean.yml\" sourcestartlinenumber=\"1\">Preprocessor line handler for boolean declarations and optional initialization.\nRecognises lines of the form:</p>\n<ul sourcefile=\"api/BOOSE_App.AppBoolean.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/BOOSE_App.AppBoolean.yml\" sourcestartlinenumber=\"3\">&quot;boolean &lt;name&gt;&quot; (declare)</li>\n<li sourcefile=\"api/BOOSE_App.AppBoolean.yml\" sourcestartlinenumber=\"4\">&quot;boolean &lt;name&gt; = &lt;expr&gt;&quot; (declare and initialise)\nWhen handled the declaration is consumed by the preprocessor (no runtime output) and\nthe named boolean variable is created/updated in the provided <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppCanvas",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppCanvas.yml\" sourcestartlinenumber=\"1\">Simple bitmap canvas implementation of ICanvas from BOOSE\nProvides basic drawing methods like moveto, drawto, circle, rect, tri, writetext.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppCanvasSingleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppCanvasSingleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppCanvasSingleton",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppCanvasSingleton.yml\" sourcestartlinenumber=\"1\">Simple singleton holder for <xref href=\"BOOSE_App.AppCanvas\" data-throw-if-not-resolved=\"false\"></xref>. Provides a non-invasive wrapper\nso the application can obtain a single shared canvas instance without changing the\nconcrete <xref href=\"BOOSE_App.AppCanvas\" data-throw-if-not-resolved=\"false\"></xref> implementation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppCircle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppCircle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppCircle",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppCircle.yml\" sourcestartlinenumber=\"1\">Circle command to enable unrestricted circle drawing.\nLets user input higher radius values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Factory that creates application-specific <xref href=\"BOOSE.ICommand\" data-throw-if-not-resolved=\"false\"></xref> instances.\nReturns application-provided command implementations for commands the application overrides\n(for example &quot;circle&quot;, &quot;rect&quot;, &quot;moveto&quot;) and delegates to the base <xref href=\"BOOSE.CommandFactory\" data-throw-if-not-resolved=\"false\"></xref>\nfor any other command names.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppFor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppFor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppFor",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppFor.yml\" sourcestartlinenumber=\"1\">Preprocessor block handler for FOR...END FOR constructs.\nThe handler unrolls FOR loops at preprocess time, updating <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>\nand emitting the runtime lines that should be executed for each iteration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppIfs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppIfs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppIfs",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppIfs.yml\" sourcestartlinenumber=\"1\">Simple block handler for IF / ELSEIF / ELSE / END IF constructs used by the preprocessor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppInt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppInt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppInt",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppInt.yml\" sourcestartlinenumber=\"1\">Preprocessor line handler for integer declarations and optional initialization.\nRecognises lines of the form:</p>\n<ul sourcefile=\"api/BOOSE_App.AppInt.yml\" sourcestartlinenumber=\"3\">\n<li sourcefile=\"api/BOOSE_App.AppInt.yml\" sourcestartlinenumber=\"3\">&quot;int &lt;name&gt;&quot; (declare)</li>\n<li sourcefile=\"api/BOOSE_App.AppInt.yml\" sourcestartlinenumber=\"4\">&quot;int &lt;name&gt; = &lt;expr&gt;&quot; (declare and initialise)\nWhen handled the declaration is consumed by the preprocessor (no runtime output) and\nthe named integer variable is created/updated in the provided <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppMethod",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppMethod.yml\" sourcestartlinenumber=\"1\">Preprocessor handler for METHOD ... END METHOD blocks and CALL invocations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppMoveTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppMoveTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppMoveTo",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppMoveTo.yml\" sourcestartlinenumber=\"1\">Command that moves the current pen position to a specifc coordinate on the canvas</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppPeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppPeek.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppPeek",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppPeek.yml\" sourcestartlinenumber=\"1\">Handles &quot;peek target = arrName index&quot; preprocessing lines.\nReads an element from an integer or real array and stores it in a declared scalar variable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppPoke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppPoke.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppPoke",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppPoke.yml\" sourcestartlinenumber=\"1\">Handles preprocessing lines of the form <code>poke &lt;array&gt; &lt;indexExpr&gt; = &lt;expr&gt;</code>.\nEvaluates the index and expression, and writes the computed value into the named integer or real array\nin the provided <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>. This handler consumes the source line (does not forward it).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppReal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppReal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppReal",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppReal.yml\" sourcestartlinenumber=\"1\">Handles preprocessing lines that declare or initialize real (double) variables:</p>\n<ul sourcefile=\"api/BOOSE_App.AppReal.yml\" sourcestartlinenumber=\"2\">\n<li sourcefile=\"api/BOOSE_App.AppReal.yml\" sourcestartlinenumber=\"2\">&quot;real name&quot; declares a real variable with initial value 0.0</li>\n<li sourcefile=\"api/BOOSE_App.AppReal.yml\" sourcestartlinenumber=\"3\">&quot;real name = &lt;expr&gt;&quot; declares (or updates) a real variable with the evaluated expression value</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.AppWhile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.AppWhile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.AppWhile",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.AppWhile.yml\" sourcestartlinenumber=\"1\">Simple block handler for WHILE ... END WHILE\nEvaluates the boolean condition and processes the loop body repeatedly at preprocess time,\nupdating <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref> and emitting the runtime lines produced each iteration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.ExpressionEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.ExpressionEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.ExpressionEvaluator",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.ExpressionEvaluator.yml\" sourcestartlinenumber=\"1\">Small expression evaluator used by preprocessing handlers.\nImplements <xref href=\"BOOSE_App.IExpressionEvaluator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Form1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Form1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Form1",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Form1.yml\" sourcestartlinenumber=\"1\">Main application form for the BOOSE interpreter UI.\nHosts the program inout textbox, a run button, an error log and a picture box that displays the drawing canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.IExpressionEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.IExpressionEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.IExpressionEvaluator",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.IExpressionEvaluator.yml\" sourcestartlinenumber=\"1\">Abstraction for expression evaluation used by handlers and the preprocessor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.ILineHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.ILineHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.ILineHandler",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.ILineHandler.yml\" sourcestartlinenumber=\"1\">Represents a preprocessing line handler.\nImplementations inspect a single source line and may consume it (perform actions against\nthe <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>) or produce a transformed line to be forwarded to the parser.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.IPreprocessorState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.IPreprocessorState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.IPreprocessorState",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.IPreprocessorState.yml\" sourcestartlinenumber=\"1\">Abstraction for the state used by preprocessing handlers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.PreprocessorState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.PreprocessorState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.PreprocessorState",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.PreprocessorState.yml\" sourcestartlinenumber=\"1\">Shared state used by preprocessing handlers.\nImplements <xref href=\"BOOSE_App.IPreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppArrayTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppArrayTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppArrayTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppArrayTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppArray\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nEach test verifies that the handler correctly declares arrays of the requested type and size\nand updates the provided <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref> accordingly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppBooleanTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppBooleanTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppBooleanTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppBooleanTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppBoolean\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nEach test verifies that boolean declarations and initializations are handled correctly\nand that state mutation in <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref> matches expectations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppCanvasTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppCanvasTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppCanvasTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppCanvasTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppCanvas\" data-throw-if-not-resolved=\"false\"></xref> class.\nVerifies basic drawing API behaviour: moving the pen, drawing lines/shapes and producing a bitmap.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppCircleTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppCircleTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppCircleTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppCircleTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppCircle\" data-throw-if-not-resolved=\"false\"></xref> command and basic parser/command integration.\nEnsures a small program containing a circle command executes without throwing and produces a bitmap.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppForTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppForTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppForTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppForTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppFor\" data-throw-if-not-resolved=\"false\"></xref> preprocessor block handler.\nVerifies the FOR...END FOR unrolling behaviour and integer-argument evaluation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppIfsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppIfsTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppIfsTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppIfsTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppIfs\" data-throw-if-not-resolved=\"false\"></xref> preprocessor block handler.\nTests verify that IF/ELSE sections are selected and processed correctly given prepopulated state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppIntTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppIntTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppIntTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppIntTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppInt\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nVerifies integer declaration and initialization behaviour and the resulting mutations to <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppMethodTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppMethodTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppMethodTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppMethodTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppMethod\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nVerifies method declaration parsing, registration and that a subsequent &quot;call&quot;\ninvocation executes the method body at preprocess time and stores the return value in state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppPeekTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppPeekTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppPeekTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppPeekTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppPeek\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nVerifies that values can be read from integer and real arrays and stored into\ndeclared scalar variables in <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppPokeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppPokeTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppPokeTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppPokeTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppPoke\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nVerifies behaviour for writing values into integer and real arrays in <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppRealTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppRealTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppRealTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppRealTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppReal\" data-throw-if-not-resolved=\"false\"></xref> preprocessor handler.\nVerifies real variable declaration and initialization behaviour and the resulting mutations to <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppRect_MoveTo_Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppRect_MoveTo_Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppRect_MoveTo_Tests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppRect_MoveTo_Tests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppRect\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"BOOSE_App.AppMoveTo\" data-throw-if-not-resolved=\"false\"></xref> commands via parser integration.\nEach test runs a small BOOSE program against a fresh <xref href=\"BOOSE_App.AppCanvas\" data-throw-if-not-resolved=\"false\"></xref> and asserts expected canvas state or output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.AppWhileTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.AppWhileTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.AppWhileTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.AppWhileTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.AppWhile\" data-throw-if-not-resolved=\"false\"></xref> preprocessor block handler.\nEnsures WHILE blocks are evaluated and their bodies emitted repeatedly until the condition becomes false.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.ExpressionEvaluatorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.ExpressionEvaluatorTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.ExpressionEvaluatorTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.ExpressionEvaluatorTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the <xref href=\"BOOSE_App.ExpressionEvaluator\" data-throw-if-not-resolved=\"false\"></xref> class.\nVerifies numeric expression evaluation and boolean expression evaluation behavior\nusing a <xref href=\"BOOSE_App.PreprocessorState\" data-throw-if-not-resolved=\"false\"></xref> instance as the variable source.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.PreprocessorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.PreprocessorTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests.PreprocessorTests",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.Tests.PreprocessorTests.yml\" sourcestartlinenumber=\"1\">Unit tests for the preprocessing stage of the BOOSE interpreter.\nExercises scalar declarations, loop/unrolling behaviour, method registration/calls and WHILE block processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.Tests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.VariableProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.VariableProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App.VariableProcessor",
+      "Summary": "<p sourcefile=\"api/BOOSE_App.VariableProcessor.yml\" sourcestartlinenumber=\"1\">Preprocessing helper that walks raw program text, handles declarations/blocks and\nemits a preprocessed program suitable for the parser.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_App",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_Test.BOOSE_Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_Test.BOOSE_Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_Test.BOOSE_Tests",
+      "Summary": "<p sourcefile=\"api/BOOSE_Test.BOOSE_Tests.yml\" sourcestartlinenumber=\"1\">Unit tests for the BOOSE_App drawing commands and integration with <xref href=\"BOOSE_App.AppCanvas\" data-throw-if-not-resolved=\"false\"></xref>.\nTests verify that command execution updates canvas state (pen position) as expected.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSE_Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSE_Test.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSE_Test",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

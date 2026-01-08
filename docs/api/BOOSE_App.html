@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace BOOSE_App | MyBOOSE_Doc </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace BOOSE_App | MyBOOSE_Doc ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="MyBOOSE_Doc">
+            MyBOOSE_Doc
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BOOSE_App">
+
+  <h1 id="BOOSE_App" data-uid="BOOSE_App" class="text-break">Namespace BOOSE_App</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppArray.html">AppArray</a></dt>
+      <dd><p>Handles array declarations of the form:
+array int name = &lt;sizeExpr&gt;
+array real name = &lt;sizeExpr&gt;
+Also accepts the shorthand without '=':
+array int name &lt;sizeExpr&gt;
+Creates and registers the array in the preprocessor state.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppBoolean.html">AppBoolean</a></dt>
+      <dd><p>Preprocessor line handler for boolean declarations and optional initialization.
+Recognises lines of the form:</p>
+<ul>
+<li>&quot;boolean &lt;name&gt;&quot; (declare)</li>
+<li>&quot;boolean &lt;name&gt; = &lt;expr&gt;&quot; (declare and initialise)
+When handled the declaration is consumed by the preprocessor (no runtime output) and
+the named boolean variable is created/updated in the provided <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>.</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppCanvas.html">AppCanvas</a></dt>
+      <dd><p>Simple bitmap canvas implementation of ICanvas from BOOSE
+Provides basic drawing methods like moveto, drawto, circle, rect, tri, writetext.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppCanvasSingleton.html">AppCanvasSingleton</a></dt>
+      <dd><p>Simple singleton holder for <a class="xref" href="BOOSE_App.AppCanvas.html">AppCanvas</a>. Provides a non-invasive wrapper
+so the application can obtain a single shared canvas instance without changing the
+concrete <a class="xref" href="BOOSE_App.AppCanvas.html">AppCanvas</a> implementation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppCircle.html">AppCircle</a></dt>
+      <dd><p>Circle command to enable unrestricted circle drawing.
+Lets user input higher radius values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppCommandFactory.html">AppCommandFactory</a></dt>
+      <dd><p>Factory that creates application-specific <span class="xref">BOOSE.ICommand</span> instances.
+Returns application-provided command implementations for commands the application overrides
+(for example &quot;circle&quot;, &quot;rect&quot;, &quot;moveto&quot;) and delegates to the base <span class="xref">BOOSE.CommandFactory</span>
+for any other command names.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppFor.html">AppFor</a></dt>
+      <dd><p>Preprocessor block handler for FOR...END FOR constructs.
+The handler unrolls FOR loops at preprocess time, updating <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>
+and emitting the runtime lines that should be executed for each iteration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppIfs.html">AppIfs</a></dt>
+      <dd><p>Simple block handler for IF / ELSEIF / ELSE / END IF constructs used by the preprocessor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppInt.html">AppInt</a></dt>
+      <dd><p>Preprocessor line handler for integer declarations and optional initialization.
+Recognises lines of the form:</p>
+<ul>
+<li>&quot;int &lt;name&gt;&quot; (declare)</li>
+<li>&quot;int &lt;name&gt; = &lt;expr&gt;&quot; (declare and initialise)
+When handled the declaration is consumed by the preprocessor (no runtime output) and
+the named integer variable is created/updated in the provided <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>.</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppMethod.html">AppMethod</a></dt>
+      <dd><p>Preprocessor handler for METHOD ... END METHOD blocks and CALL invocations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppMoveTo.html">AppMoveTo</a></dt>
+      <dd><p>Command that moves the current pen position to a specifc coordinate on the canvas</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppPeek.html">AppPeek</a></dt>
+      <dd><p>Handles &quot;peek target = arrName index&quot; preprocessing lines.
+Reads an element from an integer or real array and stores it in a declared scalar variable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppPoke.html">AppPoke</a></dt>
+      <dd><p>Handles preprocessing lines of the form <code>poke &lt;array&gt; &lt;indexExpr&gt; = &lt;expr&gt;</code>.
+Evaluates the index and expression, and writes the computed value into the named integer or real array
+in the provided <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>. This handler consumes the source line (does not forward it).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppReal.html">AppReal</a></dt>
+      <dd><p>Handles preprocessing lines that declare or initialize real (double) variables:</p>
+<ul>
+<li>&quot;real name&quot; declares a real variable with initial value 0.0</li>
+<li>&quot;real name = &lt;expr&gt;&quot; declares (or updates) a real variable with the evaluated expression value</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.AppWhile.html">AppWhile</a></dt>
+      <dd><p>Simple block handler for WHILE ... END WHILE
+Evaluates the boolean condition and processes the loop body repeatedly at preprocess time,
+updating <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a> and emitting the runtime lines produced each iteration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.ExpressionEvaluator.html">ExpressionEvaluator</a></dt>
+      <dd><p>Small expression evaluator used by preprocessing handlers.
+Implements <a class="xref" href="BOOSE_App.IExpressionEvaluator.html">IExpressionEvaluator</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.Form1.html">Form1</a></dt>
+      <dd><p>Main application form for the BOOSE interpreter UI.
+Hosts the program inout textbox, a run button, an error log and a picture box that displays the drawing canvas.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.PreprocessorState.html">PreprocessorState</a></dt>
+      <dd><p>Shared state used by preprocessing handlers.
+Implements <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.VariableProcessor.html">VariableProcessor</a></dt>
+      <dd><p>Preprocessing helper that walks raw program text, handles declarations/blocks and
+emits a preprocessed program suitable for the parser.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.IExpressionEvaluator.html">IExpressionEvaluator</a></dt>
+      <dd><p>Abstraction for expression evaluation used by handlers and the preprocessor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.ILineHandler.html">ILineHandler</a></dt>
+      <dd><p>Represents a preprocessing line handler.
+Implementations inspect a single source line and may consume it (perform actions against
+the <a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a>) or produce a transformed line to be forwarded to the parser.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BOOSE_App.IPreprocessorState.html">IPreprocessorState</a></dt>
+      <dd><p>Abstraction for the state used by preprocessing handlers.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
